@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,164 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.send-msg {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+/* .messages {
+  height: 354px;
+  border: 1px solid gray;
+  max-width: 268px;
+  margin: 0 auto;
+  border-radius: 8px;
+} */
+.chat {
+  max-width: 378px;
+  margin: 0 auto;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 106px;
+  padding-right: 1px;
+  background-color: lavender;
+  padding: 0;
+}
+.signout {
+  max-width: 80px;
+  display: flex;
+  margin-left: auto;
+}
+.msg-text {
+  font-size: 15px;
+}
+.msg {
+  /* display: flex; */
+  padding-left: 8px;
+  /* margin: 20px; */
+  /* border-radius: 3000px; */
+  box-shadow: 0 0 2px rgb(164, 164, 164);
+  align-items: center;
+  padding: 5px 0;
+  padding-left: 6px;
+  flex-direction: column;
+}
+
+.sent {
+  background-color: #a8e4a0;
+  color: white;
+  /* border-top-right-radius: 1000px; */
+  /* flex-direction: row-reverse; */
+  padding: 0px 0 0 3px;
+  text-align: end;
+  float: right;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  min-width: 120px;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.received {
+  border: 1px solid lightgray;
+  background-color: #fafafa;
+  /* border-top-left-radius: 1000px; */
+  float: left;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  min-width: 120px;
+}
+
+.sendMsg {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  border-top: 1px solid lightgray;
+  margin-left: -5px;
+  padding: 10px;
+  padding-bottom: 30px;
+  background-color: #fafafa;
+}
+
+.msgs {
+  /* margin: 110px 0; */
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 405px;
+  padding: 2px;
+}
+.msgs::-webkit-scrollbar {
+  width: 4px; /* width of the entire scrollbar */
+}
+.msgs::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+.msgs::-webkit-scrollbar-thumb {
+  background-color: lightgray; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+}
+img {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  margin-top: 2px;
+  margin-right: 5px;
+  /* border: 2px solid black; */
+}
+
+span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  margin-bottom: 4px;
+  font-size: 15px;
+  padding: 5px 0 5px 0;
+  overflow-wrap: break-word;
+  margin-bottom: 5px;
+  margin: 0;
+  margin-bottom: -2px;
+  display: inline-block;
+  margin-right: 7px;
+}
+.form-group {
+  width: 100%;
+}
+.form-control {
+  height: 43px;
+}
+.createbtn {
+  border: 1px solid lightgray;
+}
+.sent img {
+  margin-right: -10px;
+  margin-top: -6px;
+}
+h4 {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 17px;
+}
+span {
+  padding: 0;
+}
+.time {
+  display: flex;
+  justify-content: end;
+  color: gray;
+  padding-right: 6px;
+}
+.msg-tex {
+  color: #000;
+}
+.name {
+  color: purple;
+  font-style: italic;
 }
