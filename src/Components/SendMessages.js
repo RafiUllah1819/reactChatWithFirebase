@@ -2,31 +2,43 @@ import React, { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../Config/FirbaseConfig";
 import firebase from "firebase/compat/app";
-// import 'firebase/compat/auth';
+
 import "firebase/compat/firestore";
 
 export const SendMessages = () => {
-  var today = new Date(),
-    time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  console.log("currentitme", time);
+  const handleKeyUP = (event) => {
+    if (event.key === "Enter") {
+      creatMessage();
+    }
+  };
+
+  var today = new Date();
+  today = today.toLocaleString("en-US", {
+    hour: "numeric",
+    hour12: true,
+    minute: "numeric",
+    minute60: true,
+  });
+  // console.log("todayTime", today);
+
   const [msg, setMsg] = useState("");
 
-  const createCollection = collection(db, "userMsg");
+  const createCollection = collection(db, "room1");
   const creatMessage = () => {
-    const { uid, photoURL ,displayName } = auth.currentUser;
-    console.log("authcurrenuser", auth.currentUser.displayName);
-    console.log("uidss", uid);
-    console.log("uidss", photoURL);
-    addDoc(createCollection, {
-      text: msg,
-      photoURL,
-      uid,
-      time,
-      displayName,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-    });
-    setMsg("");
+    if (msg.length < 1) {
+      console.log("not sending msg");
+    } else {
+      const { uid, photoURL, displayName } = auth.currentUser;
+      addDoc(createCollection, {
+        text: msg,
+        photoURL,
+        uid,
+        today,
+        displayName,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+      setMsg("");
+    }
   };
   return (
     <div className="send-msg">
@@ -34,9 +46,10 @@ export const SendMessages = () => {
         <input
           type="text"
           className="form-control"
-          placeholder="Messsage..."
+          placeholder="Type Messsage..."
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
+          onKeyPress={handleKeyUP}
         />
       </div>
       <button className="createbtn" onClick={creatMessage}>

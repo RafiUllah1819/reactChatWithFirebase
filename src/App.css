@@ -49,17 +49,7 @@
   margin: 0 auto;
   border-radius: 8px;
 } */
-.chat {
-  max-width: 378px;
-  margin: 0 auto;
-  border: 1px solid lightgray;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 106px;
-  padding-right: 1px;
-  background-color: lavender;
-  padding: 0;
-}
+
 .signout {
   max-width: 80px;
   display: flex;
@@ -93,6 +83,7 @@
   min-width: 120px;
   text-align: left;
   padding-top: 10px;
+  max-width: 320px;
 }
 
 .received {
@@ -103,6 +94,7 @@
   margin-bottom: 5px;
   border-radius: 4px;
   min-width: 120px;
+  max-width: 320px;
 }
 
 .sendMsg {
@@ -170,10 +162,9 @@ span {
   border: 1px solid lightgray;
 }
 .sent img {
-  margin-right: -10px;
   margin-top: -6px;
 }
-h4 {
+h6 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   width: 100%;
@@ -187,12 +178,65 @@ span {
   display: flex;
   justify-content: end;
   color: gray;
-  padding-right: 6px;
+  font-size: 13px;
 }
 .msg-tex {
   color: #000;
 }
-.name {
-  color: purple;
+.me {
+  color: blue;
   font-style: italic;
+}
+.other {
+  color: brown;
+  font-style: italic;
+}
+.top {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.fa-users {
+  color: lightslategray;
+  font-size: 21px;
+  margin-left: 11px;
+}
+.msg-tex {
+  max-width: 370px;
+}
+.main-section {
+  display: flex;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: lavender;
+  border-radius: 2px;
+  outline: solid 10px gainsboro;
+}
+.sidebar {
+  width: 100%;
+  /* background-color: ghostwhite; */
+}
+.chat {
+  min-width: 378px;
+  margin: 0 auto;
+  border: 1px solid lightgray;
+  background-color: lavender;
+  padding: 0;
+  width: 100%;
+}
+.left-side {
+  margin-top: 50px;
+}
+.nav {
+  width: 100%;
+  padding-top: 59px;
+}
+.d-flex {
+  width: 100%;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #000;
+  background-color: ghostwhite;
 }
