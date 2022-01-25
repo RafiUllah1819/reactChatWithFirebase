@@ -1,10 +1,10 @@
 import React from "react";
-import { Tab, Row, Col, Nav } from "react-bootstrap";
 
-export const Sidebar = () => {
+
+export const Sidebar = (props) => {
   return (
     <div className="sidebar">
-  Room1
+  {props.room}
     </div>
   );
 };

@@ -41,6 +41,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 /* .messages {
   height: 354px;
@@ -182,6 +183,7 @@ span {
 }
 .msg-tex {
   color: #000;
+  max-width: 311px;
 }
 .me {
   color: blue;
@@ -201,9 +203,7 @@ span {
   font-size: 21px;
   margin-left: 11px;
 }
-.msg-tex {
-  max-width: 370px;
-}
+
 .main-section {
   display: flex;
   max-width: 550px;
@@ -232,6 +232,10 @@ span {
   width: 100%;
   padding-top: 59px;
 }
+.nav-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 .d-flex {
   width: 100%;
 }
@@ -239,4 +243,9 @@ span {
 .nav-pills .show > .nav-link {
   color: #000;
   background-color: ghostwhite;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: white;
+  color: #000;
 }
